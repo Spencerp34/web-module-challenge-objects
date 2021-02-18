@@ -160,9 +160,14 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+function getReviewByRating(array, ratingScore) {
+  let filteredArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].rating === ratingScore){
+      filteredArray.push(array[i]);
+    }
+  }return filteredArray;
+}
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -178,9 +183,16 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
+function getLongReviews(array) {    
+  let filteredArray = [];
+  
+  for(let i = 0; i < array.length; i++){
+    let wordCount = array[i].feedback.split(' ');
+    if(wordCount.length > 15){
+      filteredArray.push(array[i]);
+    };
+  }return filteredArray;
+};
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
